@@ -63,7 +63,7 @@ Bsear.setOnClickListener(new View.OnClickListener() {
 
         new kilomi().execute(GlobalUrlvalidation.meterreading+"?mobileNumber="+smobile_number);
     }
-    @SuppressLint("StaticFieldLeak")
+
     public class kilomi extends AsyncTask<String, String, List<Meter_reading>> {
         @Override
         protected void onPreExecute() {
