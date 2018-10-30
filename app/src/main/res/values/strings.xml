@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MeterApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_meter_details_page">MeterDetailsPage</string>
+    <string name="title_activity_home_page">HomePage</string>
+    <string name="title_activity_otp">OtpActivity</string>
+</resources>

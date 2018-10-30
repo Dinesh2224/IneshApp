@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MeterDetailsPage"
+    tools:showIn="@layout/activity_meter_details_page">
+
+    <android.support.v7.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+
+        android:layout_height="468dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        app:columnCount="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/Binstant"
+            android:layout_width="135dp"
+            android:layout_height="103dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_bg_button"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Instant"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            app:layout_column="0"
+            app:layout_row="0"
+
+            />
+
+        <Button
+            android:id="@+id/Bconsup"
+            android:layout_width="134dp"
+            android:layout_height="102dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_bg_button"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Consumption"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            app:layout_column="1"
+            app:layout_row="0"
+
+            />
+
+        <Button
+            android:id="@+id/Bpay"
+            android:layout_width="134dp"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_bg_button"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Payment"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <Button
+            android:id="@+id/Bbills"
+            android:layout_width="136dp"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_bg_button"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Bills"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            app:layout_column="1"
+            app:layout_row="1"
+
+            />
+
+        <Button
+            android:id="@+id/Bloadbal"
+            android:layout_width="133dp"
+            android:layout_height="112dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_bg_button"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Loads Balance"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            app:layout_column="0"
+            app:layout_row="2"
+
+            />
+
+        <Button
+            android:id="@+id/Bevents"
+            android:layout_width="137dp"
+            android:layout_height="112dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_bg_button"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Events and Alarms"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            app:layout_column="1"
+            app:layout_row="2"
+
+            />
+
+        <Button
+            android:id="@+id/Benergy"
+            android:layout_width="134dp"
+            android:layout_height="114dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_bg_button"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Energy Saving"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            app:layout_column="0"
+            app:layout_row="3"
+
+            />
+
+        <Button
+            android:id="@+id/Bpowerfail"
+            android:layout_width="136dp"
+            android:layout_height="113dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_bg_button"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Power Fail Details"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            app:layout_column="1"
+            app:layout_row="3"
+
+            />
+    </android.support.v7.widget.GridLayout>
+
+    <Button
+        android:id="@+id/Bback"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/edittext_bg_round"
+        android:text="Back"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/gridLayout"
+        app:layout_constraintStart_toStartOf="@+id/gridLayout"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+</android.support.constraint.ConstraintLayout>

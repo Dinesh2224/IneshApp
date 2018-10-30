@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".LoginActivity"
+
+    tools:showIn="@layout/activity_login">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="118dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ineshlogo" />
+
+    <EditText
+        android:id="@+id/loginmeternumber"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/edittext_bg_round"
+        android:ems="10"
+        android:hint="Mobile Number"
+        android:inputType="phone"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:textColorHint="#fff"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+
+    <EditText
+
+        android:id="@+id/loginpassword"
+        android:layout_width="220dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/edittext_bg_round"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="phone"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:textColorHint="#fff"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/loginmeternumber"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/loginmeternumber"
+        app:layout_constraintTop_toBottomOf="@+id/loginmeternumber"
+        tools:textSize="14sp" />
+
+    <Button
+        android:id="@+id/blogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/edittext_bg_round"
+        android:text="Login"
+        android:textColor="#fff"
+        app:layout_constraintEnd_toEndOf="@+id/tfrgpass"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="@+id/tfrgpass"
+        app:layout_constraintTop_toBottomOf="@+id/tfrgpass" />
+
+    <TextView
+        android:id="@+id/tsignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Don`t have an account? Sign up!"
+        app:layout_constraintEnd_toEndOf="@+id/blogin"
+        app:layout_constraintStart_toStartOf="@+id/blogin"
+        app:layout_constraintTop_toBottomOf="@+id/blogin" />
+
+    <TextView
+        android:id="@+id/tfrgpass"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginTop="20dp"
+        android:text="Forgot Password?"
+        app:layout_constraintEnd_toEndOf="@+id/loginpassword"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/loginpassword"
+        app:layout_constraintTop_toBottomOf="@+id/loginpassword" />
+
+
+
+
+</android.support.constraint.ConstraintLayout>
