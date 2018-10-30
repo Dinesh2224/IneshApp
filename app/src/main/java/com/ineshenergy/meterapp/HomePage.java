@@ -1,5 +1,6 @@
 package com.ineshenergy.meterapp;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -41,7 +42,7 @@ ImageButton Bsear;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar =  findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         LVmeter=findViewById(R.id.meterdetail_list);
@@ -62,6 +63,7 @@ Bsear.setOnClickListener(new View.OnClickListener() {
 
         new kilomi().execute(GlobalUrlvalidation.meterreading+"?mobileNumber="+smobile_number);
     }
+    @SuppressLint("StaticFieldLeak")
     public class kilomi extends AsyncTask<String, String, List<Meter_reading>> {
         @Override
         protected void onPreExecute() {
