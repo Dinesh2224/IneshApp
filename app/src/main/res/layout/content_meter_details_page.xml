@@ -150,7 +150,7 @@
     </android.support.v7.widget.GridLayout>
 
     <Button
-        android:id="@+id/Bback"
+        android:id="@+id/Blogout"
         android:layout_width="wrap_content"
         android:layout_height="24dp"
         android:layout_marginTop="8dp"

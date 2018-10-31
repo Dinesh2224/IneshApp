@@ -11,30 +11,29 @@
 
     <EditText
         android:id="@+id/metrtc"
-        android:layout_width="178dp"
-        android:layout_height="35dp"
+        android:layout_width="252dp"
+        android:layout_height="42dp"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:enabled="false"
         android:inputType="textPersonName"
         android:textAlignment="center"
-        android:textSize="14sp"
+        android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="@+id/systrtc"
         app:layout_constraintStart_toStartOf="@+id/systrtc"
         app:layout_constraintTop_toBottomOf="@+id/systrtc" />
 
     <EditText
         android:id="@+id/systrtc"
-        android:layout_width="178dp"
-        android:layout_height="35dp"
-
+        android:layout_width="256dp"
+        android:layout_height="41dp"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:enabled="false"
         android:inputType="textPersonName"
         android:text=""
         android:textAlignment="center"
-        android:textSize="14sp"
+        android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="@+id/meterno"
         app:layout_constraintStart_toStartOf="@+id/meterno"
         app:layout_constraintTop_toBottomOf="@+id/meterno" />
@@ -43,8 +42,6 @@
         android:id="@+id/meterno"
         android:layout_width="0dp"
         android:layout_height="42dp"
-
-
         android:layout_marginStart="8dp"
         android:layout_marginTop="56dp"
         android:layout_marginEnd="8dp"
@@ -70,7 +67,7 @@
         app:srcCompat="@drawable/ineshlogo" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="311dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="56dp"
@@ -94,7 +91,7 @@
                 android:enabled="false"
                 android:inputType="textPersonName"
                 android:textAlignment="center"
-                android:textSize="14sp"
+                android:textSize="10sp"
                 tools:layout_editor_absoluteX="203dp"
                 tools:layout_editor_absoluteY="482dp" />
 
@@ -107,7 +104,7 @@
                 android:enabled="false"
                 android:inputType="textPersonName"
                 android:textAlignment="center"
-                android:textSize="14sp"
+                android:textSize="10sp"
                 tools:layout_editor_absoluteX="60dp"
                 tools:layout_editor_absoluteY="482dp" />
 
@@ -174,7 +171,7 @@
                 android:enabled="false"
                 android:inputType="textPersonName"
                 android:textAlignment="center"
-                android:textSize="14sp"
+                android:textSize="10sp"
                 tools:layout_editor_absoluteX="204dp"
                 tools:layout_editor_absoluteY="353dp" />
 
@@ -186,7 +183,7 @@
                 android:enabled="false"
                 android:inputType="textPersonName"
                 android:textAlignment="center"
-                android:textSize="14sp"
+                android:textSize="10sp"
                 tools:layout_editor_absoluteX="60dp"
                 tools:layout_editor_absoluteY="353dp" />
 
@@ -198,7 +195,7 @@
                 android:enabled="false"
                 android:inputType="textPersonName"
                 android:textAlignment="center"
-                android:textSize="14sp"
+                android:textSize="10sp"
                 tools:layout_editor_absoluteX="203dp"
                 tools:layout_editor_absoluteY="310dp" />
 
@@ -212,7 +209,7 @@
                 android:enabled="false"
                 android:inputType="textPersonName"
                 android:textAlignment="center"
-                android:textSize="14sp"
+                android:textSize="10sp"
                 tools:layout_editor_absoluteX="60dp"
                 tools:layout_editor_absoluteY="310dp" />
 
@@ -224,7 +221,7 @@
                 android:enabled="false"
                 android:inputType="textPersonName"
                 android:textAlignment="center"
-                android:textSize="14sp"
+                android:textSize="10sp"
                 tools:layout_editor_absoluteX="203dp"
                 tools:layout_editor_absoluteY="525dp" />
 
@@ -236,7 +233,7 @@
                 android:enabled="false"
                 android:inputType="textPersonName"
                 android:textAlignment="center"
-                android:textSize="14sp"
+                android:textSize="10sp"
                 tools:layout_editor_absoluteX="60dp"
                 tools:layout_editor_absoluteY="525dp" />
 

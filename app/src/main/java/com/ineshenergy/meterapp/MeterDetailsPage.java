@@ -33,7 +33,7 @@ String meternoin;
         Binstant=findViewById(R.id.Binstant);
 Bconsup=findViewById(R.id.Bconsup);
 Bbills=findViewById(R.id.Bbills);
-Bback=findViewById(R.id.Bback);
+Bback=findViewById(R.id.Blogout);
 Bpay=findViewById(R.id.Bpay);
 
 Bconsup.setOnClickListener(new View.OnClickListener() {
@@ -79,7 +79,7 @@ Bbills.setOnClickListener(new View.OnClickListener() {
 Bback.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
-        startActivity(new Intent(MeterDetailsPage.this,HomePage.class));
+        onBackPressed();
     }
 });
 Bpay.setOnClickListener(new View.OnClickListener() {

@@ -30,7 +30,7 @@ String otptext2;
     String otptext3;
     String otptext4;
     String otptext5;
-
+    private SessionManager session;
 private ProgressDialog dialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,13 +59,13 @@ Bsbresenotp=findViewById(R.id.sbotp);
         Bsbresenotp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String otptext1=ETotp1.getText().toString() +ETotp1;
-                String otptext2=ETotp2.getText().toString() +ETotp2;
-                String otptext3=ETotp3.getText().toString() +ETotp3;
-                String otptext4=ETotp4.getText().toString() +ETotp4;
+                String otptext1=ETotp1.getText().toString() ;
+                String otptext2=ETotp2.getText().toString();
+                String otptext3=ETotp3.getText().toString() ;
+                String otptext4=ETotp4.getText().toString() ;
                 String otptext5= otptext1 + otptext2 +otptext3 +otptext4;
 
-                if (!otpfrom.equals(otptext5))
+                if (otpfrom.equals(otptext5))
 {
     dialog.show();
     registerandotp(smobile_number,otptext5);
@@ -100,9 +100,11 @@ else
 
                                 String otp=users_detail.getString("meter_num");
                                 String mobile_number=users_detail.getString("mobile_number");
+
                                 Intent newintent=new Intent(OtpActivity.this,HomePage.class);
                                 newintent.putExtra("mobile_number",mobile_number);
                                 newintent.putExtra("user_otp",otp);
+                                startActivity(newintent);
                                 finish();
                             }
                             else

@@ -2,8 +2,8 @@ package com.ineshenergy.meterapp;
 
 public class GlobalUrlvalidation {
 
-    public static  String Base_url ="http://118.91.232.232:89/aac/";
-
+  //  public static  String Base_url ="http://118.91.232.232:89/aac/";
+ public static String Base_url ="http://smarte.co.in/dinesh_testing/";
 
     public static  String meterreading=Base_url+"meterreadinglist.php";
     public static  String meterreading_query=Base_url+"meterreadinglistquery.php";

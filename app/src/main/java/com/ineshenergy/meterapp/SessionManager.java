@@ -20,6 +20,8 @@ public class SessionManager {
     private static final String PREF_NAME = "Vignesh";
 
     private static final String KEY_IS_LOGGEDIN = "isLoggedIn";
+    private static final String KEY_IS_MOBILE = "mobileNumber";
+
 
     public SessionManager(Context context) {
         this._context = context;
@@ -36,8 +38,22 @@ public class SessionManager {
 
         Log.d(TAG, "User login session modified!");
     }
+    public void setmobileNumber(String mobileNumber) {
+
+        editor.putString(KEY_IS_MOBILE, mobileNumber);
+
+        // commit changes
+        editor.commit();
+
+        Log.d(TAG, "User login session modified!");
+    }
 
     public boolean isLoggedIn(){
         return pref.getBoolean(KEY_IS_LOGGEDIN, false);
     }
+
+    public String getmobileNumber(){
+        return pref.getString(KEY_IS_MOBILE,"");
+    }
+
 }

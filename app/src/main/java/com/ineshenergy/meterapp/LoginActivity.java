@@ -28,6 +28,7 @@ TextView tfrgpass;
 TextView loginmeternumber;
 TextView loginpassword;
     private ProgressDialog dialog;
+    private SessionManager session;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +44,14 @@ tfrgpass=findViewById(R.id.tfrgpass);
 loginmeternumber=findViewById(R.id.loginmeternumber);
 loginpassword=findViewById(R.id.loginpassword);
 
+        session = new SessionManager(this);
 
+        if (session.isLoggedIn()) {
+
+            Intent intent = new Intent(this, HomePage.class);
+            startActivity(intent);
+
+        }
 
 Blogin.setOnClickListener(new View.OnClickListener() {
     @Override
@@ -90,6 +98,8 @@ tfrgpass.setOnClickListener(new View.OnClickListener() {
 
                                 String meter_num=users_detail.getString("meter_num");
                                 String mobile_number=users_detail.getString("mobile_number");
+                                session.setLogin(true);
+                                session.setmobileNumber(mobile_number);
                                 Intent newintent=new Intent(LoginActivity.this,HomePage.class);
                                 newintent.putExtra("mobile_number",mobile_number);
                                 newintent.putExtra("meter_num",meter_num);

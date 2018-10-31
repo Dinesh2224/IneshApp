@@ -1,6 +1,5 @@
 package com.ineshenergy.meterapp;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -12,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -37,7 +37,9 @@ public class HomePage extends AppCompatActivity {
 ListView LVmeter;
 EditText ETsearchtext;
 ImageButton Bsear;
+    Button Blogout;
 
+    private SessionManager session;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,10 +49,22 @@ ImageButton Bsear;
 
         LVmeter=findViewById(R.id.meterdetail_list);
 ETsearchtext=findViewById(R.id.searchtext_meter);
+        Blogout=findViewById(R.id.Blogout);
+        session = new SessionManager(this);
 
+        if (!session.isLoggedIn()) {
+
+            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+            startActivity(intent);
+
+        }
 Bsear=findViewById(R.id.Bsearchimage);
-        Intent intent = getIntent();
-        final String smobile_number = intent.getStringExtra("mobile_number");
+//        Intent intent = getIntent();
+//        final String smobile_number = intent.getStringExtra("mobile_number");
+
+
+        final String smobile_number = session.getmobileNumber();
+
 Bsear.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
@@ -60,7 +74,15 @@ Bsear.setOnClickListener(new View.OnClickListener() {
     }
 });
 
-
+        Blogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                session.setLogin(false);
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
         new kilomi().execute(GlobalUrlvalidation.meterreading+"?mobileNumber="+smobile_number);
     }
 
@@ -185,9 +207,6 @@ Bsear.setOnClickListener(new View.OnClickListener() {
 
         class ViewHolder {
             public TextView meterno;
-
-
-
         }
     }
 

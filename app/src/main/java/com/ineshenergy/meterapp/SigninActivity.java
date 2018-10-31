@@ -29,11 +29,12 @@ Button Bsbsignup;
 EditText ETmobile_num,ETmeternum,ETpass,ETrepass;
 String Smobile_num,Smeternum,Spass,Srepass;
     private ProgressDialog dialog;
+    private SessionManager session;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
-
+        session = new SessionManager(this);
 TVsignin=findViewById(R.id.tsignin);
         dialog = new ProgressDialog(this);
         dialog.setIndeterminate(true);
@@ -93,6 +94,8 @@ TVsignin=findViewById(R.id.tsignin);
                                 JSONObject users_detail=jsonObject.getJSONObject("users_detail");
                                 String otp=users_detail.getString("user_otp");
                                 String mobile_number=users_detail.getString("mobile_number");
+                                session.setLogin(true);
+                                session.setmobileNumber(mobile_number);
                                 Intent newintent=new Intent(SigninActivity.this,OtpActivity.class);
                                 newintent.putExtra("mobile_number",mobile_number);
                                 newintent.putExtra("user_otp",otp);
