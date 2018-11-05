@@ -110,7 +110,21 @@ tfrgpass.setOnClickListener(new View.OnClickListener() {
                             {
                                 dialog.dismiss();
                                 String message =jsonObject.getString("message");
-                                Toast.makeText(getApplicationContext(),message,Toast.LENGTH_SHORT).show();
+                                if (message.equals("VO"))
+                                {
+                                    JSONObject users_detail=jsonObject.getJSONObject("users_detail");
+                                    String otp=users_detail.getString("user_otp");
+                                    String mobile_number=users_detail.getString("mobile_number");
+                                    session.setmobileNumber(mobile_number);
+                                    Intent newintent=new Intent(LoginActivity.this,OtpActivity.class);
+                                    newintent.putExtra("mobile_number",mobile_number);
+                                    newintent.putExtra("user_otp",otp);
+                                }
+                                else
+                                {
+                                    Toast.makeText(getApplicationContext(),message,Toast.LENGTH_SHORT).show();
+
+                                }
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();

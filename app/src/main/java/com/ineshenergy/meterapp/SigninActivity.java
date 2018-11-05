@@ -94,7 +94,6 @@ TVsignin=findViewById(R.id.tsignin);
                                 JSONObject users_detail=jsonObject.getJSONObject("users_detail");
                                 String otp=users_detail.getString("user_otp");
                                 String mobile_number=users_detail.getString("mobile_number");
-                                session.setLogin(true);
                                 session.setmobileNumber(mobile_number);
                                 Intent newintent=new Intent(SigninActivity.this,OtpActivity.class);
                                 newintent.putExtra("mobile_number",mobile_number);

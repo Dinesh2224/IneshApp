@@ -25,11 +25,7 @@ public class OtpActivity extends AppCompatActivity {
 
 EditText ETotp1,ETotp2,ETotp3,ETotp4;
 Button Bsbresenotp;
-String otptext1;
-String otptext2;
-    String otptext3;
-    String otptext4;
-    String otptext5;
+
     private SessionManager session;
 private ProgressDialog dialog;
     @Override
@@ -100,7 +96,7 @@ else
 
                                 String otp=users_detail.getString("meter_num");
                                 String mobile_number=users_detail.getString("mobile_number");
-
+                                session.setLogin(true);
                                 Intent newintent=new Intent(OtpActivity.this,HomePage.class);
                                 newintent.putExtra("mobile_number",mobile_number);
                                 newintent.putExtra("user_otp",otp);
